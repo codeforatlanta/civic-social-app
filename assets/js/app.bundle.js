@@ -77,6 +77,7 @@
 			$scope.current.facebook = $sce.trustAsResourceUrl($scope.current.facebook);
 		});
 		$scope.setActive = function(id) {
+			$('html,body').animate({scrollTop: $(".profile").offset().top});
 			document.getElementById('currentTwitter').innerHTML = "";
 			$("li").removeClass("active");
 			$("li." + id).addClass("active");
