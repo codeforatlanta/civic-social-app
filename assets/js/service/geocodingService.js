@@ -20,7 +20,7 @@ var geocodingService = function() {
 
 // Promise that loads in geojson and produces query function
 var districtQuery = new Promise(function(resolve,reject) {
-    $.getJSON( "http://data.coaplangis.opendata.arcgis.com/datasets/87db1a3385ef4ab1af86411efbe791bf_3.geojson", function( data ) {
+    $.getJSON( "/data/City_Council_Districts.geojson", function( data ) {
         var query = whichPolygon(data);
         resolve(query);
     });
