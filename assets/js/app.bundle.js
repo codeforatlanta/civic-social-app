@@ -127,7 +127,7 @@
 
 	// Promise that loads in geojson and produces query function
 	var districtQuery = new Promise(function(resolve,reject) {
-	    $.getJSON( "/data/City_Council_Districts.geojson", function( data ) {
+	    $.getJSON( "data/City_Council_Districts.geojson", function( data ) {
 	        var query = whichPolygon(data);
 	        resolve(query);
 	    });
